@@ -131,6 +131,7 @@ async def countdown(ctx, time):
                 leaderboardEmbed.set_thumbnail(url='https://bit.ly/37pTkCz')
                 leaderboardEmbed.add_field(name = f'Counting down from {time}!', value = f'`{time}!`')
                 await leaderboardMessage.edit(embed=leaderboardEmbed)
+                time -= 1
                 await asyncio.sleep(1)
 
             leaderboardEmbed = discord.Embed(title = 'Countdown completed!', color=0xff0000)
